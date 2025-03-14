@@ -3,8 +3,9 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/TimmyBigi/NumberGuessGame.git'
-            }
+                git  url: 'https://github.com/shebwell/Team-20-Project.git',
+                    credentialsId: 'da637548-59f7-43a8-b916-c4364fad15da',
+                    branch: 'main'            }
         }
         stage('Build') {
             steps {
